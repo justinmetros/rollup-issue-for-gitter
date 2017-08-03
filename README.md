@@ -21,7 +21,9 @@ Run `npm run build` then `npm start`
 
 If you run the above with `external: ['jquery']` ( line 30 ) of rollup.config.js it will not work.
 
-If you uncomment `external: ['jquery']` ( line 30 ) out, it will work. Either way in the above two scenarios, jQuery will be included in the bundle - slick is requiring it, and I'm doing something wrong to not catch it.
+If you uncomment `external: ['jquery']` ( line 30 ) out, and rebuild, it will work.
+
+Either way in the above two scenarios, jQuery will be included in the bundle - slick is requiring it, and I'm doing something wrong to not catch it.
 
 This is undesirable, as we want to use jQuery via a CDN in script tag.
 
