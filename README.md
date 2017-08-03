@@ -19,15 +19,15 @@ Run `npm run build` then `npm start`
 
 [slick-carousel](https://www.npmjs.com/package/slick-carousel) installs jquery as a dependency in node_modules.
 
-If you run the above with `external: ['jquery']` ( line 30 ) of rollup.config.js it will not work.
+1. If you run the above with `external: ['jquery']` ( line 30 ) of rollup.config.js it will not work.
 
-If you comment out `external: ['jquery']` ( line 30 ) out, and rebuild, it will work.
+2. If you comment out `external: ['jquery']` ( line 30 ) out, and rebuild, it will work.
 
-Either way in the above two scenarios, jQuery will be included in the bundle - slick is requiring it, and I'm doing something wrong to not catch it.
+  * Either way in the above two scenarios, jQuery will be included in the bundle - slick is requiring it, and I'm doing something wrong to not catch it.
 
-This is undesirable, as we want to use jQuery via a CDN in script tag.
+  * This is undesirable, as we want to use jQuery via a CDN in script tag.
 
-If you `npm uninstall jquery` and turn the `external: ['jquery']` ( line 30 ) of rollup.config.js back on, and `npm run build` it will work correctly and jQuery will not be included in the build.
+3. If you `npm uninstall jquery` and turn the `external: ['jquery']` ( line 30 ) of rollup.config.js back on, and `npm run build` it will work correctly and jQuery will not be included in the build.
 
 I'm pretty sure I am not understanding externals and globals correctly.
 
