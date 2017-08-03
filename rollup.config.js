@@ -27,6 +27,6 @@ export default {
   globals: {
     jquery: 'jQuery'
   },
-  external: ['jquery'],  // <-- if you comment out this line and rebuild, it works
+  external: ['jquery'],  // <-- if you comment out this line and rebuild, it works, but jquery still included in bundle. Have to npm uninstall jquery and leave this as is to work properly
   dest: 'public/bundle.js'
 };
