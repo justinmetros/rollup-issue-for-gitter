@@ -1,6 +1,11 @@
 # Rollup Issue with External Jquery
 
+### Update:
+This was a confirmed bug by Rollup author and has been fixed in the latest release :)
+
 ### Issue:
+This is a repor for a conversation on Gitter regarding an issue.
+
 I would like to keep jQuery as an external dependency, but some jQuery plugins ( [Slick](https://www.npmjs.com/package/slick-carousel) in this case ) have a require('jquery') statement in them.
 
 ### Getting Started
@@ -28,7 +33,5 @@ Run `npm run build` then `npm start`
   * This is undesirable, as we want to use jQuery via a CDN in script tag.
 
 3. If you `npm uninstall jquery` and turn the `external: ['jquery']` ( line 30 ) of rollup.config.js back on, and `npm run build` it will work correctly and jQuery will not be included in the build.
-
-I'm pretty sure I am not understanding externals and globals correctly.
 
 Any help greatly appreciated, as I'm really loving RollUp! :heart:
